@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning JavaScript</title>
+</head>
+<body>
+
+    <script>
+        function add7(number){
+            return number+7
+        }
+        function multiply(a,b){
+            return a*b
+        }
+        function capitalize(string){
+            return string[0].toUpperCase() + string.slice(1).toLowerCase()
+        }
+        function lastLetter(string){
+            if (!string){
+                return ""
+            } else{
+                return string.slice(-1)
+            }
+        }
+        console.log(lastLetter("apple"))
+    </script>
+    
+</body>
+</html>
