@@ -1,0 +1,21 @@
+#container{
+    display:grid;
+    width:500px;
+    height:500px;
+    grid-template-columns: repeat(18, 1fr); /*Creating grid boxes manually i didnet know how to do*/
+    grid-template-rows: repeat(18, 1fr);
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+.square{
+    border: 1px solid #ccc;
+  }
+:hover.square{
+    background-color: lightblue;
+}
+#custom{
+   background-color: black;
+   color: white;
+   border-radius: 10px;
+}

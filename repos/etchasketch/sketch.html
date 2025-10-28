@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sketch.css">
+    <title>etch-a-sketch</title>
+</head>
+<body>
+    <button id="custom">Click to change Grid size</button>
+    <div id="container"></div>
+
+    <script>
+        const container = document.querySelector("#container")
+        for(let i=0; i<256;i++){
+            const squares = document.createElement("div")
+            squares.classList.add("square")
+            container.appendChild(squares)
+        }
+        function createNew(nums){
+            container.innerHTML=""
+            container.style.gridTemplateColumns = `repeat(${nums}, 1fr)`; // This is the main part i didnt know how to do
+            container.style.gridTemplateRows = `repeat(${nums}, 1fr)`;
+
+            for(let i=0; i<nums*nums; i++){
+                const squares = document.createElement("div")
+                squares.classList.add("square")
+                container.appendChild(squares)
+            }
+        }
+
+        const button = document.querySelector("#custom")
+        button.addEventListener("click", function(){
+            let gridNum = Number(prompt("Enter a grid size"))
+
+            while ((gridNum<0 || gridNum>100)||(isNaN(gridNum))){
+                gridNum = Number(prompt("please enter a valid grid size"))
+            }
+            createNew(gridNum)
+        })
+        const box = document.querySelector("div")
+        box.addEventListener("click", function(){
+            
+        })
+
+    </script>
+</body>
+</html>

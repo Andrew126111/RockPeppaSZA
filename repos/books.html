@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    function Book(title, author, total_pages, read){
+    this.title = title;
+    this.author = author;
+    this.total_pages= total_pages;
+    this.read = read;
+    this.info = function(){
+        if (read){
+            console.log(title + "by " + author + ","+ total_pages + " pages, read ");
+        }
+        else{
+            console.log(title + "by " + author + ","+ total_pages + " pages, not read yet");
+        }
+    }
+}
+let theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
+console.log(theHobbit.info())
+</script>
+</html>
